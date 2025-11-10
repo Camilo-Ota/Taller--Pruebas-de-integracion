@@ -129,3 +129,27 @@ Incluye **enlaces al código** (`Registry.java`, `RegistryController.java`, test
 - ¿Qué aprendiste sobre **integración continua (CI)** al ejecutar tus pruebas con Maven y JaCoCo?
 
 
+### 11) Rúbrica – Taller de Pruebas de Integración y Sistema
+
+| **Criterios de evaluación** | **Indicadores de cumplimiento** | **Excelente (5 pts)** | **Bueno (4 pts)** | **Necesita mejorar (3.5 pts)** | **Deficiente (2.5 pts)** | **No cumple (0 pts)** |
+|-----------------------------|----------------------------------|------------------------|-------------------|-------------------------------|--------------------------|------------------------|
+| **Estructura del proyecto y repositorio** | El repositorio está correctamente organizado, con `.gitignore`, ramas compilables y documentación básica. | Estructura limpia, compilable con `mvn clean verify`, incluye `.gitignore` y documentación. | Compila correctamente, estructura clara con mínimos ajustes. | Estructura parcialmente ordenada, requiere ajustes menores. | Errores de compilación o estructura desordenada. | No entrega o el código no ejecuta. |
+| **Documentación en Wiki** | Contiene secciones completas (Inicio, tipos de pruebas, resultados, reflexión, etc.) con enlaces al código. | Wiki completo, claro y con enlaces a todas las clases y tests. | Wiki completo con leves omisiones o sin algunos enlaces. | Wiki incompleto o con poca claridad. | Wiki muy limitado o confuso. | No hay Wiki o está vacío. |
+| **Pruebas de integración (H2)** | Implementa pruebas reales entre `Registry` y `RegistryRepository`. | ≥3 pruebas completas y funcionales, usando H2 y patrón AAA. | Pruebas funcionales pero con cobertura parcial. | Pruebas incompletas o sin verificación clara de persistencia. | Escenarios incorrectos o sin H2 configurado. | No existen pruebas de integración. |
+| **Pruebas con mocks (Mockito)** | Uso de mocks y verificación de interacciones. | ≥2 pruebas con Mockito usando `when`, `verify`, `never`, etc. correctamente. | Pruebas correctas pero con poca variedad o validación parcial. | Usa mocks sin verificar interacciones o comportamiento. | Configuración incorrecta de mocks. | No existen pruebas con mocks. |
+| **Pruebas de sistema (HTTP)** | Validación de endpoints reales con MockMvc o RestTemplate. | ≥2 pruebas HTTP completas (200, 400, 500), con aserciones válidas. | Pruebas funcionales pero con casos limitados. | Pruebas incompletas o con endpoints incorrectos. | Pruebas fallidas o sin conexión al servidor. | No existen pruebas HTTP. |
+| **Cobertura de pruebas (JaCoCo)** | Nivel de cobertura global y por capa. | ≥80% global y ≥70% en `application` y `delivery`. | Entre 70–79% global, sin grandes omisiones. | Cobertura media (50–69%) o irregular. | Cobertura <50%. | No presenta reporte o no genera cobertura. |
+| **Matriz de pruebas** | Tabla de casos probados y correspondencia con métodos de test. | Matriz completa, clara y actualizada. | Matriz parcial con algunos casos omitidos. | Matriz incompleta o sin correspondencia con código. | Matriz confusa o sin formato. | No entrega matriz. |
+| **Gestión de defectos** | Registro de defectos y análisis. | Documento `defectos.md` con al menos 1 caso bien analizado. | Documento con casos simulados pero comprensibles. | Documento incompleto o superficial. | Caso sin análisis o sin evidencias. | No entrega `defectos.md`. |
+| **Calidad del código** | Claridad, limpieza y consistencia del código. | Código limpio, sin duplicaciones, constantes extraídas, buen uso de excepciones. | Código comprensible con leves redundancias. | Código con duplicación o nombres poco claros. | Código confuso o sin buenas prácticas. | Código desorganizado o con errores graves. |
+| **Reflexión técnica** | Análisis de resultados y aprendizajes. | Reflexión profunda sobre diseño, pruebas y CI/CD. | Reflexión correcta pero superficial. | Reflexión breve o poco argumentada. | Reflexión vaga o sin relación con el taller. | No presenta reflexión. |
+
+| Rango de puntaje | Desempeño                                                |
+| ---------------- | -------------------------------------------------------- |
+| 45 – 50          | Excelente dominio técnico y metodológico.                |
+| 35 – 44          | Buen trabajo con documentación o cobertura parcial.      |
+| 30 – 34          | Cumple con lo básico pero sin profundidad.               |
+| < 30             | No cumple con los criterios mínimos del taller/proyecto. |
+
+---
+
